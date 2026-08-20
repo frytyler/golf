@@ -53,7 +53,7 @@
         '<div class="tgls">' +
           (par >= 4 ? '<button class="tgl" data-act="fir" title="Fairway hit">FIR</button>' : '') +
           '<button class="tgl" data-act="gir" title="Green in regulation">GIR</button>' +
-          '<button class="tgl pen" data-act="pen" title="Penalty stroke">&#9887;</button>' +
+          '<button class="tgl pen" data-act="pen" title="Penalty stroke">PEN</button>' +
         '</div>' +
         '<input class="adj" data-adj placeholder="How #' + n + ' played: club, miss, lesson">';
       card.appendChild(row);
