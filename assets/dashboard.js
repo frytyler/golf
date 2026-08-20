@@ -74,7 +74,7 @@
     h += '<a href="./courses/stonebridge.html">Stonebridge · Full 18</a>';
     h += '<a href="./courses/manderley.html">Manderley · South 9</a>';
     h += '<a href="./courses/marchwood.html">Marchwood · Par 3s</a>';
-    h += '<span class="soon">The Canadian · coming soon</span>';
+    h += '<a href="./courses/canadian.html">The Canadian · East 9</a>';
     h += '</div></div>';
 
     h += '<footer>Built with Claude Code · scores from Tyler\'s cards · dates marked approx or unknown where not recorded</footer>';

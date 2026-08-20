@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-25",
+  "course": "canadian",
+  "logLabel": "Canadian East 9",
+  "h": {
+    "1": { "s": 6, "p": null, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "2": { "s": 4, "p": null, "pen": false, "fir": false, "gir": false, "adj": "194 forced carry, played it like a short par 4. Bogey." },
+    "3": { "s": 6, "p": null, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "4": { "s": 6, "p": null, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "5": { "s": 8, "p": null, "pen": true, "fir": false, "gir": false, "adj": "SI-1 par 5, water at the green. Went for it, made 8. Lay up short next time." },
+    "6": { "s": 3, "p": null, "pen": false, "fir": false, "gir": true, "adj": "PAR. First water-carry par of the project (125). Committed." },
+    "7": { "s": 7, "p": null, "pen": true, "fir": false, "gir": false, "adj": "The steal that wasn't. Water left, driver ambush. Position club off the tee." },
+    "8": { "s": 5, "p": null, "pen": false, "fir": false, "gir": false, "adj": "Boring bogey, no drama." },
+    "9": { "s": 6, "p": null, "pen": false, "fir": false, "gir": false, "adj": "" }
+  }
+}
