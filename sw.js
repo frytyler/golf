@@ -1,14 +1,14 @@
 /* Boring Bogey Blueprint — service worker.
    Network-first for code/data (fresh when online, cache fallback offline).
    Cache-first for images (immutable, heavy). Bump CACHE on any precache change. */
-var CACHE = 'bbb-v5';
+var CACHE = 'bbb-v6';
 var CORE = [
   './', './index.html', './manifest.webmanifest',
   './assets/bbb.css', './assets/charts.js', './assets/dashboard.js',
   './assets/renderer.js', './assets/tracker.js',
   './data/rounds.json',
-  './data/courses/stonebridge.json', './data/courses/manderley.json', './data/courses/marchwood.json',
-  './courses/stonebridge.html', './courses/manderley.html', './courses/marchwood.html',
+  './data/courses/stonebridge.json', './data/courses/manderley.json', './data/courses/marchwood.json', './data/courses/canadian.json',
+  './courses/stonebridge.html', './courses/manderley.html', './courses/marchwood.html', './courses/canadian.html',
   './favicon.svg', './apple-touch-icon.png', './icon-192.png', './icon-512.png'
 ];
 

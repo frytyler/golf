@@ -1,0 +1,105 @@
+{
+  "slug": "canadian",
+  "eyebrow": "The Boring Bogey Blueprint · East 9",
+  "title": "The Canadian",
+  "accent": "East Nine",
+  "sub": "The Canadian G&CC · East 9 · White/Front · Par 35 · ~2,950 yds to pins",
+  "indexLabel": "S.I.",
+  "logLabel": "Canadian East 9",
+  "thesis": "Your first visit here was 51, and the whole story was two holes: the S.I.-1 par 5 (#5) and the \"steal\" that wasn't (#7). Hold those two and this is a mid-40s nine. Everything else, the plan already worked: you bogeyed the 194 forced carry (#2) and <b>PARRED the 125 water carry (#6)</b>. One ball, aim dry, advance to a wedge, take the bogey.",
+  "tempo": {
+    "label": "One cue, every club",
+    "word": "Smooth",
+    "note": "Full and committed, never light. If smooth won't reach, club up. \"More\" is the miss, and here it feeds the water."
+  },
+  "bagTitle": "Your bag today",
+  "bag": [
+    { "html": "Driver <b>185</b> · smooth" },
+    { "html": "Hybrids carry <b>10-15 MORE</b> than the iron #", "star": true },
+    { "html": "4H <b>180</b>" },
+    { "html": "5H <b>165</b>" },
+    { "html": "5i <b>150</b>" },
+    { "html": "6i <b>135</b>" },
+    { "html": "7i <b>120</b> · pushes RIGHT", "star": true },
+    { "html": "8i <b>105</b>" },
+    { "html": "9i <b>90</b>" },
+    { "html": "PW <b>60-70</b> · money", "star": true }
+  ],
+  "stats": [
+    { "n": "44", "l": "Bogey every hole" },
+    { "n": "35", "l": "Par · ~2,950" },
+    { "n": "51", "l": "First visit (Jul 25)" }
+  ],
+  "nines": [
+    { "label": "East Nine", "total": "Par 35 · ~2,950 to pins · target 44", "start": 1 }
+  ],
+  "holes": [
+    { "num": 1, "par": 4, "yards": 336, "hcp": 4, "accent": "", "tag": null,
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · center, one ball in play" },
+        { "k": "Setup", "v": "advance to a full wedge, ~70" },
+        { "k": "Wedge", "v": "PW to center", "wedge": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 2, "par": 3, "yards": 194, "hcp": 5, "accent": "hard", "tag": { "type": "flag", "text": "194 forced carry" },
+      "steps": [
+        { "k": "Reframe", "v": "194 is past comfortable carry. Play it like a short par 4; bogey is the win." },
+        { "k": "Tee", "v": "Longest club you carry cleanly (4H) · aim center, over the trouble", "wedge": true },
+        { "k": "Then", "v": "Chip and two putts. You bogeyed it here last time, do it again." }
+      ], "target": { "score": 4, "last": 4 } },
+    { "num": 3, "par": 4, "yards": 341, "hcp": 8, "accent": "", "tag": null,
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · center" },
+        { "k": "Setup", "v": "advance to a full wedge" },
+        { "k": "Wedge", "v": "PW to center", "wedge": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 4, "par": 4, "yards": 348, "hcp": 7, "accent": "", "tag": null,
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · center" },
+        { "k": "Setup", "v": "full wedge in, ~75" },
+        { "k": "Wedge", "v": "PW to center", "wedge": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 5, "par": 5, "yards": 519, "hcp": 1, "hcpNote": "hardest", "accent": "hard", "tag": { "type": "flag", "text": "S.I. 1 · water at green" },
+      "steps": [
+        { "k": "Reframe", "v": "S.I. 1, water guards the green. Three-shot hole, NEVER go for it." },
+        { "k": "Tee", "v": "Driver, smooth · center" },
+        { "k": "Setup", "v": "5H to lay up SHORT of the green water, leave a full wedge" },
+        { "k": "Wedge", "v": "PW to center · a dry bogey 6 is the play", "wedge": true },
+        { "k": "", "v": "This is the hole that made an 8. Lay up, take the 6, walk.", "note": true }
+      ], "target": { "score": 6, "last": 8 } },
+    { "num": 6, "par": 3, "yards": 125, "hcp": 2, "accent": "short", "tag": { "type": "water", "text": "125 water carry" },
+      "steps": [
+        { "k": "Tee", "v": "The club you carry the water without thinking · aim center, commit", "wedge": true },
+        { "k": "", "v": "You made PAR here, the first water-carry par of the project. Same shot, same commit.", "note": true }
+      ], "target": { "score": 4, "last": 3 } },
+    { "num": 7, "par": 4, "yards": 300, "hcp": 6, "accent": "hard", "tag": { "type": "flag", "text": "Water left · position" },
+      "steps": [
+        { "k": "Reframe", "v": "NOT a steal. Tight with water LEFT. Position first, distance never." },
+        { "k": "Tee", "v": "5H or 5i, NOT driver · aim center-right, away from the left water" },
+        { "k": "Setup", "v": "short iron to a full wedge" },
+        { "k": "Wedge", "v": "PW to center", "wedge": true },
+        { "k": "", "v": "This one ambushed you for a 7. Driver brings the left water in play. Take the position club.", "note": true }
+      ], "target": { "score": 5, "last": 7 } },
+    { "num": 8, "par": 4, "yards": 347, "hcp": 9, "hcpNote": "easiest", "accent": "short", "tag": { "type": "par", "text": "Boring bogey" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · center" },
+        { "k": "Setup", "v": "full wedge in" },
+        { "k": "Wedge", "v": "PW to center · the boring 5, no drama", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 9, "par": 4, "yards": 443, "hcp": 3, "accent": "hard", "tag": { "type": "flag", "text": "Long · S.I. 3" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · center. Longest par 4 on the nine" },
+        { "k": "Setup", "v": "hybrid to advance, leave a wedge" },
+        { "k": "Wedge", "v": "PW to center · take the bogey and close it", "wedge": true }
+      ], "target": { "score": 5, "last": 6 } }
+  ],
+  "keysTitle": "Five things to run the East",
+  "keys": [
+    "<b>#5 is the discipline hole. Lay up short of the green water, never go for it.</b> S.I. 1 with water at the green did exactly what it threatened and made an 8. A dry bogey 6 there is a great number.",
+    "<b>#7 is a position hole, not a steal.</b> Water runs LEFT and driver brings it in play. Hybrid or 5i off the tee, aim center-right, and it's a routine bogey instead of an ambush 7.",
+    "<b>The water-carry par 3s are real now.</b> You parred the 125 (#6) here and bogeyed the 194 (#2). Commit to the carry, aim center, and let the short game clean up.",
+    "<b>Smooth is full and committed, not light.</b> \"More\" gives you a slice right and less distance, and on this nine it feeds the water. If smooth won't reach, club up.",
+    "<b>Putts: die it at the hole.</b> 17 putts held up here on greens you'd never seen. Lines are good, speed is the miss. Short putts lean right → aim the LEFT EDGE."
+  ],
+  "footer": "White/Front · Par 35 · target 44 · \"last:\" from your Jul 25 first visit (51). Both penalties tracked the flagged water on #5 and #7.",
+  "images": null
+}

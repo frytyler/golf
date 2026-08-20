@@ -47,10 +47,10 @@
     {
       "id": "canadian-east",
       "course": "canadian", "courseName": "The Canadian (East 9)",
-      "date": null, "tees": "",
+      "date": "2026-07-25", "tees": "White",
       "holes": 9, "segment": "9", "par": 35, "score": 51, "toPar": 16,
       "scores": [6,4,6,6,8,3,7,5,6],
-      "note": "Held the scary holes. Two blow-ups (#5 par 5, #7). Date unknown."
+      "note": "First visit. Bogeyed the 194 carry (#2), PARRED the 125 water carry (#6). Two blow-ups: #5 (SI-1 par 5) and #7 (the steal that wasn't)."
     }
   ]
 }
