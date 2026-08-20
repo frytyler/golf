@@ -92,6 +92,27 @@ h1 span{color:var(--pencil);display:block}
 .pen.on{background:var(--flag);border-color:var(--flag);color:#fff}
 .adj{flex:1 1 100%;margin-top:2px;font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--ink);background:#fff;border:1px solid rgba(18,49,42,.2);border-radius:6px;padding:8px 10px}
 .adj::placeholder{color:rgba(92,107,98,.55)}
+.tgls{display:flex;gap:6px;margin-left:auto}
+.tgl{min-width:38px;height:34px;padding:0 8px;border:1px solid rgba(18,49,42,.26);background:#fff;color:var(--muted);font-family:"Oswald";font-weight:700;font-size:.72rem;letter-spacing:.04em;border-radius:6px;cursor:pointer}
+.tgl.on{background:var(--fairway);border-color:var(--fairway);color:#fff}
+.tgl.pen.on{background:var(--flag);border-color:var(--flag);color:#fff}
+.stv.sc-under{color:#1b7a4a}
+.stv.sc-on{color:var(--pine)}
+.stv.sc-over{color:var(--flag)}
+
+/* ---- round insights ---- */
+.insights{margin-top:34px;background:var(--fairway);border-radius:7px;padding:20px}
+.insights h2{font-family:"Oswald";font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.85rem;color:var(--pencil);margin-bottom:14px;display:flex;align-items:baseline;gap:10px}
+.ins-thru{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;color:rgba(245,240,228,.6);text-transform:none}
+.ins-empty{font-size:.92rem;color:rgba(245,240,228,.75);line-height:1.6}
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(min-width:640px){.ins-grid{grid-template-columns:repeat(5,1fr)}}
+.ins-tile{background:rgba(18,49,42,.5);border:1px solid rgba(245,240,228,.1);border-radius:6px;padding:12px 10px;text-align:center}
+.ins-tile .itn{font-family:"Oswald";font-weight:700;font-size:1.55rem;line-height:1;color:var(--pencil)}
+.ins-tile .itl{font-family:"IBM Plex Mono",monospace;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,240,228,.62);margin-top:6px;line-height:1.3}
+.ins-leak{margin-top:14px;font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:rgba(245,240,228,.85);line-height:1.8}
+.ins-leak b{color:#fff}
+.summary{cursor:pointer}
 
 /* ---- tools row ---- */
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 4px}

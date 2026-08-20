@@ -1,4 +1,5 @@
-/* Boring Bogey Blueprint — live round tracker. Reads CONFIG, runs after render. */
+/* Boring Bogey Blueprint — live round tracker + shot capture + insights.
+   Reads CONFIG, runs after render. */
 (function () {
   window.BBB = window.BBB || {};
 
@@ -20,9 +21,10 @@
     var byNum = {};
     for (var i = 0; i < C.holes.length; i++) byNum[C.holes[i].num] = C.holes[i];
 
-    function rec(n) { if (!state.h[n]) state.h[n] = { s: null, p: null, pen: false, adj: '' }; return state.h[n]; }
+    function rec(n) { if (!state.h[n]) state.h[n] = { s: null, p: null, pen: false, fir: false, gir: false, adj: '' }; return state.h[n]; }
     function tgt(ho) { return ho && ho.target ? ho.target.score : (ho ? ho.par + 1 : 5); }
     function clamp(v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; }
+    function delta(v) { return v === 0 ? 'E' : v > 0 ? '+' + v : '' + v; }
 
     function toast(msg) {
       var t = document.createElement('div'); t.textContent = msg;
@@ -39,20 +41,24 @@
       var numEl = card.querySelector('.num');
       if (!numEl) continue;
       var n = parseInt(numEl.textContent, 10);
+      var par = byNum[n] ? byNum[n].par : 4;
       var row = document.createElement('div');
       row.className = 'trk';
       row.setAttribute('data-hole', n);
       row.innerHTML =
         '<div class="trk-grp"><span class="trk-lab">Score</span>' +
-          '<div class="stp"><button data-act="s-">−</button><span class="stv empty" data-v="s">·</span><button data-act="s+">+</button></div></div>' +
+          '<div class="stp"><button data-act="s-" aria-label="score down">&minus;</button><span class="stv empty" data-v="s">&middot;</span><button data-act="s+" aria-label="score up">+</button></div></div>' +
         '<div class="trk-grp"><span class="trk-lab">Putts</span>' +
-          '<div class="stp"><button data-act="p-">−</button><span class="stv empty" data-v="p">·</span><button data-act="p+">+</button></div></div>' +
-        '<button class="pen" data-act="pen" title="Penalty">&#9887;</button>' +
+          '<div class="stp"><button data-act="p-" aria-label="putts down">&minus;</button><span class="stv empty" data-v="p">&middot;</span><button data-act="p+" aria-label="putts up">+</button></div></div>' +
+        '<div class="tgls">' +
+          (par >= 4 ? '<button class="tgl" data-act="fir" title="Fairway hit">FIR</button>' : '') +
+          '<button class="tgl" data-act="gir" title="Green in regulation">GIR</button>' +
+          '<button class="tgl pen" data-act="pen" title="Penalty stroke">&#9887;</button>' +
+        '</div>' +
         '<input class="adj" data-adj placeholder="How #' + n + ' played: club, miss, lesson">';
       card.appendChild(row);
     }
 
-    /* ---- interactions (event delegation on each row) ---- */
     function onAct(n, act) {
       var r = rec(n), ho = byNum[n];
       if (act === 's+') r.s = (r.s == null) ? tgt(ho) : clamp(r.s + 1, 1, 15);
@@ -61,6 +67,8 @@
       else if (act === 'p+') r.p = (r.p == null) ? 1 : clamp(r.p + 1, 0, 10);
       else if (act === 'p-') r.p = (r.p == null) ? 0 : clamp(r.p - 1, 0, 10);
       else if (act === 'pen') r.pen = !r.pen;
+      else if (act === 'fir') r.fir = !r.fir;
+      else if (act === 'gir') r.gir = !r.gir;
       commit();
     }
 
@@ -94,77 +102,144 @@
     tools.querySelector('[data-t="reset"]').addEventListener('click', resetRound);
     tools.querySelector('[data-t="file"]').addEventListener('change', restore);
 
-    /* ---- fixed summary bar ---- */
+    /* ---- insights card (before footer) ---- */
+    var ins = document.createElement('div');
+    ins.className = 'insights';
+    ins.id = 'insights';
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode) footer.parentNode.insertBefore(ins, footer);
+    else document.querySelector('.wrap').appendChild(ins);
+
+    /* ---- fixed summary bar (tap to jump to insights) ---- */
     var bar = document.createElement('div');
     bar.className = 'summary';
     bar.innerHTML =
       cell('thru', 'thru') + cell('score', 'score', true) + cell('vspar', 'vs par') +
       cell('vstgt', 'vs tgt') + cell('putts', 'putts') + cell('pen', 'pen');
     document.body.appendChild(bar);
+    bar.addEventListener('click', function () { if (ins) ins.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     function cell(id, label, big) {
-      return '<div class="cell' + (big ? ' big' : '') + '"><div class="cn" data-c="' + id + '">·</div><div class="cl">' + label + '</div></div>';
+      return '<div class="cell' + (big ? ' big' : '') + '"><div class="cn" data-c="' + id + '">&middot;</div><div class="cl">' + label + '</div></div>';
     }
-    function delta(v) { return v === 0 ? 'E' : v > 0 ? '+' + v : '' + v; }
-    function setDelta(id, v) {
+    function setDelta(id, v, played) {
       var el = bar.querySelector('[data-c="' + id + '"]');
-      el.textContent = delta(v);
-      el.className = 'cn' + (v > 0 ? ' over' : v < 0 ? ' under' : '');
+      el.textContent = played ? delta(v) : '·';
+      el.className = 'cn' + (played && v > 0 ? ' over' : played && v < 0 ? ' under' : '');
     }
 
-    /* ---- render / repaint ---- */
+    /* ---- compute + render ---- */
+    function compute() {
+      var r = { thru: 0, score: 0, putts: 0, puttsHoles: 0, threePutts: 0, pen: 0,
+        parPlayed: 0, tgtPlayed: 0, firHit: 0, firElig: 0, girHit: 0,
+        scrOpp: 0, scrSave: 0, byPar: {}, worst: null };
+      for (var i = 0; i < C.holes.length; i++) {
+        var ho = C.holes[i], h = state.h[ho.num];
+        if (!h || h.s == null) continue;
+        r.thru++; r.score += h.s; r.parPlayed += ho.par; r.tgtPlayed += tgt(ho);
+        if (h.p != null) { r.putts += h.p; r.puttsHoles++; if (h.p >= 3) r.threePutts++; }
+        if (h.pen) r.pen++;
+        if (ho.par >= 4) { r.firElig++; if (h.fir) r.firHit++; }
+        if (h.gir) r.girHit++; else { r.scrOpp++; if (h.s <= ho.par) r.scrSave++; }
+        if (!r.byPar[ho.par]) r.byPar[ho.par] = { n: 0, over: 0 };
+        r.byPar[ho.par].n++; r.byPar[ho.par].over += (h.s - ho.par);
+        var over = h.s - tgt(ho);
+        if (!r.worst || over > r.worst.over) r.worst = { num: ho.num, over: over, s: h.s, par: ho.par };
+      }
+      return r;
+    }
+
+    function tile(n, l) { return '<div class="ins-tile"><div class="itn">' + n + '</div><div class="itl">' + l + '</div></div>'; }
+    function pct(a, b) { return b ? Math.round(100 * a / b) + '%' : '–'; }
+
+    function renderInsights(r) {
+      if (!r.thru) {
+        ins.innerHTML = '<h2>This round</h2><div class="ins-empty">Tap in scores as you play and your round takes shape here: fairways, greens, putts, and where the strokes are going.</div>';
+        return;
+      }
+      var girPct = pct(r.girHit, r.thru);
+      var firPct = pct(r.firHit, r.firElig);
+      var scrPct = pct(r.scrSave, r.scrOpp);
+      var pph = r.puttsHoles ? (r.putts / r.puttsHoles).toFixed(1) : '–';
+      var h = '<h2>This round <span class="ins-thru">thru ' + r.thru + '</span></h2>';
+      h += '<div class="ins-grid">';
+      h += tile(r.score, 'score');
+      h += tile(delta(r.score - r.parPlayed), 'vs par');
+      h += tile(delta(r.score - r.tgtPlayed), 'vs target');
+      h += tile(firPct, 'fairways (' + r.firHit + '/' + r.firElig + ')');
+      h += tile(girPct, 'greens (' + r.girHit + '/' + r.thru + ')');
+      h += tile(r.putts, 'putts (' + pph + '/hole)');
+      h += tile(r.threePutts, '3-putts');
+      h += tile(scrPct, 'scramble (' + r.scrSave + '/' + r.scrOpp + ')');
+      h += tile(r.pen, 'penalties');
+      h += '</div>';
+      // leak by par
+      var leak = [];
+      [3, 4, 5].forEach(function (p) {
+        if (r.byPar[p]) { var avg = r.byPar[p].over / r.byPar[p].n; leak.push('Par ' + p + ' <b>' + (avg >= 0 ? '+' : '') + avg.toFixed(1) + '</b>'); }
+      });
+      var leakStr = leak.join(' &nbsp;·&nbsp; ');
+      if (r.worst) leakStr += ' &nbsp;·&nbsp; Toughest so far <b>#' + r.worst.num + '</b> (' + delta(r.worst.over) + ' vs tgt)';
+      h += '<div class="ins-leak">Where the strokes go: ' + leakStr + '</div>';
+      ins.innerHTML = h;
+    }
+
     function render() {
       var allRows = document.querySelectorAll('.trk[data-hole]');
-      var thru = 0, score = 0, putts = 0, pen = 0, parPlayed = 0, tgtPlayed = 0;
       for (var i = 0; i < allRows.length; i++) {
         var row = allRows[i], n = parseInt(row.getAttribute('data-hole'), 10);
         var r = state.h[n], ho = byNum[n];
         var sv = row.querySelector('[data-v="s"]'), pv = row.querySelector('[data-v="p"]');
-        var penBtn = row.querySelector('.pen'), adj = row.querySelector('[data-adj]');
+        var penBtn = row.querySelector('[data-act="pen"]'), firBtn = row.querySelector('[data-act="fir"]'),
+            girBtn = row.querySelector('[data-act="gir"]'), adj = row.querySelector('[data-adj]');
         var s = r ? r.s : null, p = r ? r.p : null;
         if (s == null) { sv.textContent = '·'; sv.className = 'stv empty'; }
-        else { sv.textContent = s; sv.className = 'stv'; }
+        else {
+          sv.textContent = s;
+          var cls = s <= ho.par ? 'stv sc-under' : s <= tgt(ho) ? 'stv sc-on' : 'stv sc-over';
+          sv.className = cls;
+        }
         if (p == null) { pv.textContent = '·'; pv.className = 'stv empty'; }
-        else { pv.textContent = p; pv.className = 'stv'; }
-        if (penBtn) penBtn.className = 'pen' + (r && r.pen ? ' on' : '');
+        else { pv.textContent = p; pv.className = 'stv' + (p >= 3 ? ' sc-over' : ''); }
+        if (penBtn) penBtn.className = 'tgl pen' + (r && r.pen ? ' on' : '');
+        if (firBtn) firBtn.className = 'tgl' + (r && r.fir ? ' on' : '');
+        if (girBtn) girBtn.className = 'tgl' + (r && r.gir ? ' on' : '');
         if (adj) adj.value = (r && r.adj) ? r.adj : '';
-        if (s != null) { thru++; score += s; parPlayed += ho.par; tgtPlayed += tgt(ho); }
-        if (p != null) putts += p;
-        if (r && r.pen) pen++;
       }
-      bar.querySelector('[data-c="thru"]').textContent = thru;
-      bar.querySelector('[data-c="score"]').textContent = thru ? score : '·';
-      setDelta('vspar', score - parPlayed);
-      setDelta('vstgt', score - tgtPlayed);
-      bar.querySelector('[data-c="putts"]').textContent = putts;
-      bar.querySelector('[data-c="pen"]').textContent = pen;
+      var r2 = compute();
+      var played = r2.thru > 0;
+      bar.querySelector('[data-c="thru"]').textContent = r2.thru;
+      bar.querySelector('[data-c="score"]').textContent = played ? r2.score : '·';
+      setDelta('vspar', r2.score - r2.parPlayed, played);
+      setDelta('vstgt', r2.score - r2.tgtPlayed, played);
+      bar.querySelector('[data-c="putts"]').textContent = r2.putts;
+      bar.querySelector('[data-c="pen"]').textContent = r2.pen;
+      renderInsights(r2);
     }
     function commit() { save(); render(); }
 
     /* ---- exports ---- */
     function totalPar() { var t = 0; for (var i = 0; i < C.holes.length; i++) t += C.holes[i].par; return t; }
     function copyObsidian() {
-      var played = 0, score = 0, tgtPlayed = 0;
+      var r = compute();
       var scoreCells = [];
       for (var i = 0; i < C.holes.length; i++) {
-        var ho = C.holes[i], r = state.h[ho.num];
-        if (r && r.s != null) { played++; score += r.s; tgtPlayed += tgt(ho); scoreCells.push('' + r.s); }
-        else scoreCells.push('–');
+        var ho = C.holes[i], rr = state.h[ho.num];
+        scoreCells.push(rr && rr.s != null ? '' + rr.s : '–');
       }
-      var complete = played === C.holes.length;
-      var head = complete ? '(' + delta(score - totalPar()) + ')' : '(thru ' + played + ')';
-      var putts = 0, pen = 0, comments = [];
+      var complete = r.thru === C.holes.length;
+      var head = complete ? '(' + delta(r.score - totalPar()) + ')' : '(thru ' + r.thru + ')';
+      var comments = [];
       for (var j = 0; j < C.holes.length; j++) {
         var h2 = C.holes[j], r2 = state.h[h2.num];
-        if (!r2) continue;
-        if (r2.p != null) putts += r2.p;
-        if (r2.pen) pen++;
-        if (r2.adj) comments.push('  - **#' + h2.num + '** par ' + h2.par + ', ' + h2.yards + 'y, ' + (C.indexLabel || 'SI') + ' ' + h2.hcp + ' (' + (r2.s != null ? r2.s : '–') + ') · ' + r2.adj);
+        if (r2 && r2.adj) comments.push('  - **#' + h2.num + '** par ' + h2.par + ', ' + h2.yards + 'y, ' + (C.indexLabel || 'SI') + ' ' + h2.hcp + ' (' + (r2.s != null ? r2.s : '–') + ') · ' + r2.adj);
       }
       var T = (C.stats && C.stats[0]) ? parseInt(C.stats[0].n, 10) : totalPar() + 18;
-      var out = '### ' + (C.logLabel || C.title) + ' · ' + (state.date || today()) + ' · ' + score + ' ' + head + '\n';
+      var pph = r.puttsHoles ? (r.putts / r.puttsHoles).toFixed(1) : '0';
+      var out = '### ' + (C.logLabel || C.title) + ' · ' + (state.date || today()) + ' · ' + r.score + ' ' + head + '\n';
       out += '- Holes: `' + scoreCells.join(' · ') + '`\n';
-      out += '- ' + putts + ' putts · ' + pen + ' penalties\n';
-      out += '- vs target ' + T + ': ' + delta(score - tgtPlayed) + '\n';
+      out += '- ' + r.putts + ' putts (' + pph + '/hole) · ' + r.threePutts + ' three-putts · ' + r.pen + ' penalties\n';
+      out += '- FIR ' + pct(r.firHit, r.firElig) + ' (' + r.firHit + '/' + r.firElig + ') · GIR ' + pct(r.girHit, r.thru) + ' (' + r.girHit + '/' + r.thru + ') · scramble ' + pct(r.scrSave, r.scrOpp) + '\n';
+      out += '- vs target ' + T + ': ' + delta(r.score - r.tgtPlayed) + '\n';
       if (comments.length) out += '- How it played:\n' + comments.join('\n') + '\n';
       copyText(out);
     }
@@ -187,7 +262,8 @@
     function saveBackup() {
       try {
         var name = slug(C.logLabel || C.title) + '-' + (state.date || today()) + '.bbround.json';
-        var blob = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(state, null, 2));
+        var out = { date: state.date || today(), course: C.slug, logLabel: C.logLabel || C.title, h: state.h };
+        var blob = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(out, null, 2));
         var a = document.createElement('a'); a.href = blob; a.download = name;
         document.body.appendChild(a); a.click(); a.remove();
         toast('Backup saved');
@@ -200,7 +276,7 @@
         try {
           var d = JSON.parse(fr.result);
           if (!d || !d.h) { toast('Not a round file'); return; }
-          state = d; if (!state.h) state.h = {};
+          state = { date: d.date || today(), h: d.h };
           save(); render(); toast('Round restored');
         } catch (err) { toast("Couldn't read file"); }
         e.target.value = '';
