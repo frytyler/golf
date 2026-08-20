@@ -1,5 +1,7 @@
-/* Boring Bogey Blueprint — service worker. Cache-first shell + runtime cache for offline resilience. */
-var CACHE = 'bbb-v1';
+/* Boring Bogey Blueprint — service worker.
+   Network-first for code/data (fresh when online, cache fallback offline).
+   Cache-first for images (immutable, heavy). Bump CACHE on any precache change. */
+var CACHE = 'bbb-v2';
 var CORE = [
   './', './index.html', './manifest.webmanifest',
   './assets/bbb.css', './assets/charts.js', './assets/dashboard.js',
@@ -9,7 +11,10 @@ var CORE = [
 ];
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
+  e.waitUntil(
+    caches.open(CACHE).then(function (c) { return c.addAll(CORE).catch(function () {}); })
+      .then(function () { return self.skipWaiting(); })
+  );
 });
 
 self.addEventListener('activate', function (e) {
@@ -22,19 +27,29 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (e) {
   if (e.request.method !== 'GET') return;
+  var url;
+  try { url = new URL(e.request.url); } catch (err) { return; }
+  var sameOrigin = url.origin === location.origin;
+  var isImage = sameOrigin && url.pathname.indexOf('/img/') !== -1;
+
+  if (isImage) {
+    // cache-first: images never change
+    e.respondWith(
+      caches.match(e.request).then(function (hit) {
+        return hit || fetch(e.request).then(function (res) {
+          var copy = res.clone(); caches.open(CACHE).then(function (c) { c.put(e.request, copy); });
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  // network-first for everything else (html/js/css/json); fall back to cache offline
   e.respondWith(
-    caches.match(e.request).then(function (hit) {
-      if (hit) return hit;
-      return fetch(e.request).then(function (res) {
-        try {
-          var url = new URL(e.request.url);
-          if (url.origin === location.origin) {
-            var copy = res.clone();
-            caches.open(CACHE).then(function (c) { c.put(e.request, copy); });
-          }
-        } catch (err) {}
-        return res;
-      }).catch(function () { return hit; });
-    })
+    fetch(e.request).then(function (res) {
+      if (sameOrigin) { var copy = res.clone(); caches.open(CACHE).then(function (c) { c.put(e.request, copy); }); }
+      return res;
+    }).catch(function () { return caches.match(e.request); })
   );
 });
