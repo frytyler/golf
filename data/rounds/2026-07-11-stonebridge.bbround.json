@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-11",
+  "course": "stonebridge",
+  "logLabel": "Stonebridge 18",
+  "h": {
+    "1":  { "s": 6, "p": null, "pen": false, "adj": "" },
+    "2":  { "s": 8, "p": null, "pen": false, "adj": "Water-carry par 3. Took the marginal carry and paid for it. Biggest hole of the day." },
+    "3":  { "s": 7, "p": null, "pen": false, "adj": "" },
+    "4":  { "s": 7, "p": null, "pen": false, "adj": "Hardest hole (HCP 1). Triple." },
+    "5":  { "s": 6, "p": null, "pen": false, "adj": "" },
+    "6":  { "s": 6, "p": null, "pen": false, "adj": "" },
+    "7":  { "s": 5, "p": null, "pen": false, "adj": "" },
+    "8":  { "s": 4, "p": null, "pen": false, "adj": "Only par of the day." },
+    "9":  { "s": 4, "p": null, "pen": false, "adj": "" },
+    "10": { "s": 6, "p": null, "pen": false, "adj": "" },
+    "11": { "s": 6, "p": null, "pen": false, "adj": "" },
+    "12": { "s": 5, "p": null, "pen": false, "adj": "" },
+    "13": { "s": 5, "p": null, "pen": false, "adj": "" },
+    "14": { "s": 5, "p": null, "pen": false, "adj": "" },
+    "15": { "s": 7, "p": null, "pen": false, "adj": "" },
+    "16": { "s": 5, "p": null, "pen": false, "adj": "" },
+    "17": { "s": 5, "p": null, "pen": false, "adj": "" },
+    "18": { "s": 6, "p": null, "pen": false, "adj": "" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Boring Bogey Blueprint",
+  "short_name": "Bogey Log",
+  "description": "Personal golf tracker and per-course caddy cards.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12312a",
+  "theme_color": "#12312a"
+}
