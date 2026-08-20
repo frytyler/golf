@@ -1,13 +1,14 @@
 /* Boring Bogey Blueprint — service worker.
    Network-first for code/data (fresh when online, cache fallback offline).
    Cache-first for images (immutable, heavy). Bump CACHE on any precache change. */
-var CACHE = 'bbb-v3';
+var CACHE = 'bbb-v4';
 var CORE = [
   './', './index.html', './manifest.webmanifest',
   './assets/bbb.css', './assets/charts.js', './assets/dashboard.js',
   './assets/renderer.js', './assets/tracker.js',
   './data/rounds.json', './data/courses/stonebridge.json',
-  './courses/stonebridge.html'
+  './courses/stonebridge.html',
+  './favicon.svg', './apple-touch-icon.png', './icon-192.png', './icon-512.png'
 ];
 
 self.addEventListener('install', function (e) {
