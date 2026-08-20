@@ -1,7 +1,7 @@
 /* Boring Bogey Blueprint — service worker.
    Network-first for code/data (fresh when online, cache fallback offline).
    Cache-first for images (immutable, heavy). Bump CACHE on any precache change. */
-var CACHE = 'bbb-v2';
+var CACHE = 'bbb-v3';
 var CORE = [
   './', './index.html', './manifest.webmanifest',
   './assets/bbb.css', './assets/charts.js', './assets/dashboard.js',
@@ -45,9 +45,11 @@ self.addEventListener('fetch', function (e) {
     return;
   }
 
-  // network-first for everything else (html/js/css/json); fall back to cache offline
+  // network-first for everything else (html/js/css/json); no-store so a redeploy
+  // is never masked by the browser HTTP cache. Falls back to cache offline.
+  var opts = sameOrigin ? { cache: 'no-store' } : undefined;
   e.respondWith(
-    fetch(e.request).then(function (res) {
+    fetch(e.request, opts).then(function (res) {
       if (sameOrigin) { var copy = res.clone(); caches.open(CACHE).then(function (c) { c.put(e.request, copy); }); }
       return res;
     }).catch(function () { return caches.match(e.request); })

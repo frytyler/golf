@@ -3,6 +3,7 @@
   window.BBB = window.BBB || {};
 
   function delta(v) { return v === 0 ? 'E' : v > 0 ? '+' + v : '' + v; }
+  function tileD(n, l) { return '<div class="ins-tile"><div class="itn">' + n + '</div><div class="itl">' + l + '</div></div>'; }
 
   function byDateDesc(a, b) {
     var da = a.date || '', db = b.date || '';
@@ -37,6 +38,21 @@
     var series = [];
     for (var i = 0; i < rounds.length; i++) if (rounds[i].series === 'stonebridge-front') series.push(rounds[i]);
     series.sort(function (a, b) { return (a.seriesRound || 0) - (b.seriesRound || 0); });
+
+    var best18 = null;
+    for (var b = 0; b < rounds.length; b++) { var rd = rounds[b]; if (rd.holes === 18 && (best18 == null || rd.score < best18)) best18 = rd.score; }
+    var frontVals = [];
+    for (var f = 0; f < series.length; f++) frontVals.push(series[f].seriesValue != null ? series[f].seriesValue : series[f].score);
+    var bestFront = frontVals.length ? Math.min.apply(null, frontVals) : null;
+    var gain = frontVals.length ? frontVals[0] - bestFront : null;
+    var gainStr = gain == null ? '' : gain > 0 ? '−' + gain : gain < 0 ? '+' + (-gain) : 'E';
+    h += '<div class="dash-sec"><h2>At a glance</h2><div class="ins-grid">';
+    h += tileD(rounds.length, 'rounds logged');
+    if (best18 != null) h += tileD(best18, 'best 18');
+    if (bestFront != null) h += tileD(bestFront, 'best front 9');
+    if (gain != null) h += tileD(gainStr, 'front 9 vs first');
+    h += '</div></div>';
+
     if (series.length > 1) {
       var pts = [];
       for (var p = 0; p < series.length; p++) {
