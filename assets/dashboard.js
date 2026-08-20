@@ -39,7 +39,10 @@
     series.sort(function (a, b) { return (a.seriesRound || 0) - (b.seriesRound || 0); });
     if (series.length > 1) {
       var pts = [];
-      for (var p = 0; p < series.length; p++) pts.push({ label: 'R' + series[p].seriesRound, value: series[p].score });
+      for (var p = 0; p < series.length; p++) {
+        var val = series[p].seriesValue != null ? series[p].seriesValue : series[p].score;
+        pts.push({ label: 'R' + series[p].seriesRound, value: val });
+      }
       h += '<div class="dash-sec"><h2>Progression</h2>';
       h += '<div class="chart-card"><div class="ct">Stonebridge front 9, by round (lower is better)</div>';
       h += BBB.lineChart(pts, { aria: 'Stonebridge front nine scores by round' });
