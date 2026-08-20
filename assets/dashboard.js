@@ -72,7 +72,9 @@
 
     h += '<div class="dash-sec"><h2>Course cards</h2><div class="course-links">';
     h += '<a href="./courses/stonebridge.html">Stonebridge · Full 18</a>';
-    h += '<span class="soon">More courses as we build them</span>';
+    h += '<a href="./courses/manderley.html">Manderley · South 9</a>';
+    h += '<a href="./courses/marchwood.html">Marchwood · Par 3s</a>';
+    h += '<span class="soon">The Canadian · coming soon</span>';
     h += '</div></div>';
 
     h += '<footer>Built with Claude Code · scores from Tyler\'s cards · dates marked approx or unknown where not recorded</footer>';
