@@ -1,0 +1,110 @@
+{
+  "slug": "manderley",
+  "eyebrow": "The Boring Bogey Blueprint · White tees",
+  "title": "South Nine",
+  "accent": "Manderley",
+  "sub": "Manderley on the Green · South 9 · White · Par 35 · 2,755 yds",
+  "indexLabel": "S.I.",
+  "logLabel": "Manderley South 9",
+  "thesis": "Every yardage and hazard here is off your White-tee GPS, so this is the real card. One pattern dominates: <b>LEFT is where the trouble lives.</b> Creek the whole way down #2, plowed field down #4, road and OB on #5, a pond left of #9 from 200 to 260, and greenside bunkers left on #1, #3, #6 and #8. Your miss is a push RIGHT, which on this nine is the <i>safe</i> side eight holes out of nine. Stop fighting it: <b>aim up the left edge of safe and let it drift right.</b> Two exceptions with trouble both ways, #3 and #7, are centre-only. And <b>#5 is S.I. 1</b>: a tree chute that doglegs left at 205, where the play is 4H, not driver. Advance to a full club, take your bogey, bank <b>44</b>.",
+  "tempo": {
+    "label": "One cue, every club",
+    "word": "Smooth",
+    "note": "And smooth means FULL and COMMITTED, not light, not steery. Every green you hit in reg at Marchwood came from a committed smooth swing; the short-rights came from decelerating."
+  },
+  "bagTitle": "Your bag today",
+  "bag": [
+    { "html": "Driver <b>185</b> · smooth" },
+    { "html": "Hybrids carry <b>10-15 MORE</b> than the iron #", "star": true },
+    { "html": "4H <b>180</b>" },
+    { "html": "5H <b>165</b>" },
+    { "html": "6H <b>155</b> · the engine", "star": true },
+    { "html": "5i <b>150</b>" },
+    { "html": "6i <b>135</b> · dialed" },
+    { "html": "7i <b>120</b> · long, pushes RIGHT", "star": true },
+    { "html": "8i <b>105</b>" },
+    { "html": "9i <b>90</b> · long", "star": true },
+    { "html": "PW <b>60-70</b> · money", "star": true }
+  ],
+  "stats": [
+    { "n": "44", "l": "Bogey every hole" },
+    { "n": "35", "l": "Par · White 2,755" },
+    { "n": "48", "l": "Last time (Aug 7)" }
+  ],
+  "nines": [
+    { "label": "South Nine", "total": "Par 35 · 2,755 yds · White · target 44", "start": 1 }
+  ],
+  "holes": [
+    { "num": 1, "par": 4, "yards": 318, "hcp": 11, "accent": "", "tag": { "type": "flag", "text": "Trees center ~185" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · RIGHT-CENTER. Bunker LEFT at 150, tree cluster center/right around 185, the right side threads both" },
+        { "k": "Setup", "v": "leaves 133 → a full 6i" },
+        { "k": "Green", "v": "6i to FRONT-CENTER · bunkers left-front AND right", "wedge": true },
+        { "k": "", "v": "If the trees at 185 look tight off the tee, 5H (165) leaves 153 and a 6H in, same bogey, no gamble.", "note": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 2, "par": 4, "yards": 363, "hcp": 3, "accent": "hard", "tag": { "type": "water", "text": "Creek entire LEFT" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · RIGHT-CENTER. Creek runs the WHOLE left side; fairway bunker RIGHT is 220, you land short of it" },
+        { "k": "Setup", "v": "4H (178) to SHORT-CENTER, short of this green is a fine place to be" },
+        { "k": "Green", "v": "Chip on, 2 putts, bogey 5", "wedge": true },
+        { "k": "", "v": "Creek left is the ball-loser and the green is bunkered both sides. Three-shot par 4; firing the 4H at the flag is where \"more\" becomes a slice.", "note": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 3, "par": 3, "yards": 132, "hcp": 13, "accent": "hard", "tag": { "type": "water", "text": "Carry the creek" },
+      "steps": [
+        { "k": "Tee", "v": "6i (135), the creek crosses at ~100 and wraps BOTH sides. Carry is 105ish", "wedge": true },
+        { "k": "Club", "v": "NOT the 7i. 120 barely clears and the push-right lands in the water wrapping the right." },
+        { "k": "Miss", "v": "LONG-center is the only dry miss. Bunker sits left of the green." },
+        { "k": "", "v": "You made par on the Canadian's 125-yd water carry. Same shot, 7 yards shorter. Commit.", "note": true }
+      ], "target": { "score": 4, "last": 3 } },
+    { "num": 4, "par": 4, "yards": 329, "hcp": 5, "accent": "hard", "tag": { "type": "flag", "text": "Field LEFT = lost" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · CENTER. Open plowed FIELD down the entire LEFT; trees + bunker RIGHT 150-200" },
+        { "k": "Setup", "v": "leaves 144 → <b>5i, smooth</b> (6i is 9 short here)" },
+        { "k": "Green", "v": "5i to FRONT-CENTER · bunkers left-front and right", "wedge": true },
+        { "k": "", "v": "No bail-out either side. If driver feels loose, 4H does the same job with half the spread.", "note": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 5, "par": 4, "yards": 335, "hcp": 1, "hcpNote": "hardest", "accent": "hard", "tag": { "type": "flag", "text": "S.I. 1 · tight chute" },
+      "steps": [
+        { "k": "Tee", "v": "<b>4H (180), NOT driver.</b> Dense trees both sides, road/OB far LEFT, and it doglegs LEFT at ~205. 180 sits just short of the corner" },
+        { "k": "Setup", "v": "leaves 155 → 6H. Position first, distance second." },
+        { "k": "Green", "v": "6H to the FAT CENTER · small green, bunkered both sides", "wedge": true },
+        { "k": "", "v": "S.I. 1 and the narrowest hole out here. Driver has nowhere to miss and can run through the corner. Bogey is a win, take the 5 and walk.", "note": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 6, "par": 3, "yards": 164, "hcp": 9, "accent": "short", "tag": { "type": "par", "text": "Par look" },
+      "steps": [
+        { "k": "Tee", "v": "<b>5H (165)</b> · CENTER-RIGHT. Dead on the number; the bunker is front-LEFT", "wedge": true },
+        { "k": "Miss", "v": "Long or right-center is fine. Short-left is the sand. No water anywhere on this hole." },
+        { "k": "", "v": "164, not the 159 on the printed card. 6H (155) leaves you short-left, straight into the only bunker.", "note": true }
+      ], "target": { "score": 4, "last": 4 } },
+    { "num": 7, "par": 5, "yards": 459, "hcp": 7, "accent": "hard", "tag": { "type": "water", "text": "Creek in from RIGHT" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · CENTER. Ditch + treeline LEFT the whole way; bunkers RIGHT at 145 and 165, 185 clears both" },
+        { "k": "Setup", "v": "5H (165) → 350. Creek cuts in from the RIGHT at 250-280, so this one CARRIES it, center, no fade" },
+        { "k": "Wedge", "v": "leaves 109 → full 8i to center", "wedge": true },
+        { "k": "", "v": "Pond sits right of the green and a bunker guards left-front. Three centered swings, take the 6.", "note": true }
+      ], "target": { "score": 6, "last": 7 } },
+    { "num": 8, "par": 3, "yards": 161, "hcp": 17, "hcpNote": "easiest", "accent": "short", "tag": { "type": "par", "text": "Best par look" },
+      "steps": [
+        { "k": "Tee", "v": "6H (155), smooth · CENTER, let it run on. Bunker front-LEFT, more sand LONG-RIGHT beyond the green", "wedge": true },
+        { "k": "Miss", "v": "Center or short-center. Never long-right." },
+        { "k": "", "v": "Easiest index on the nine. Don't reach for a 5i to cover the last 6 yards, that's the slice.", "note": true }
+      ], "target": { "score": 4, "last": 5 } },
+    { "num": 9, "par": 5, "yards": 494, "hcp": 15, "accent": "short", "tag": { "type": "water", "text": "Pond LEFT 200-260" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · CENTER-RIGHT. <b>Pond sits LEFT from 200 to 260</b>; bunker RIGHT ~200; tree clumps center 100-150" },
+        { "k": "Setup", "v": "4H (180) → 365. Stay CENTER-RIGHT again, a pull here is still in the pond" },
+        { "k": "Wedge", "v": "leaves 129 → 6i to center. 6i over 7i: no push-right into the right greenside bunker", "wedge": true },
+        { "k": "", "v": "494 today, 13 longer than the card. Widest hole out here and S.I. 15, but it's the last hole, and this is exactly where \"a little more\" cost you a ball at Marchwood.", "note": true }
+      ], "target": { "score": 6, "last": 7 } }
+  ],
+  "keysTitle": "Five things to run the South",
+  "keys": [
+    "<b>LEFT is the trouble side on 8 of 9 holes.</b> Creek (#2), plowed field (#4), road/OB (#5), pond (#9), greenside sand (#1, #3, #6, #8). Your natural miss is a push RIGHT, on this nine that's a gift. Aim up the left edge of safe and let it drift right.",
+    "<b>#3 and #7 are the exceptions, centre only, no shape.</b> #3 has the creek across the front wrapping both sides; #7 has ditch LEFT and creek cutting in from the RIGHT at 250. Full club, dead center, commit.",
+    "<b>Two holes where driver is the wrong club.</b> #5 doglegs left at 205 inside a tree chute, 4H. #1 has trees center at 185, if it looks tight, 5H and a 6H in gets the same bogey.",
+    "<b>Smooth is not light.</b> Full and committed. \"More\" gave you a slice right AND less distance three times in one round. If smooth won't get there, <b>club up</b>, never swing harder.",
+    "<b>Putts: die it at the hole.</b> Lines are good, speed is the miss. Short putts lean right → aim the LEFT EDGE."
+  ],
+  "footer": "White tees · Par 35 · target 44 · \"last:\" from your Aug 7 practice round (48). LEFT is trouble on 8 of 9.",
+  "images": null
+}

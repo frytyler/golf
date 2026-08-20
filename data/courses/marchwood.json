@@ -1,0 +1,90 @@
+{
+  "slug": "marchwood",
+  "eyebrow": "The Boring Bogey Blueprint · The Marshes",
+  "title": "Marchwood",
+  "accent": "Short-Game Lab",
+  "sub": "The Marshes · 9 holes, all par 3 · Par 27 · 1,252 yds · walking",
+  "indexLabel": "HCP",
+  "logLabel": "Marchwood",
+  "thesis": "All par 3s, 91 to 186 yards. This is the lab: every swing is a tee shot, so it is the cleanest place to prove <b>smooth means full and committed, not light.</b> The two pars you made here (#3 and #7) both came from committed swings; the short-rights came from decelerating. Aim the dry side, carry what needs carrying, and let the short game do the rest.",
+  "tempo": {
+    "label": "One cue, every club",
+    "word": "Smooth",
+    "note": "Full and committed, never light. If smooth won't carry, club up. \"More\" is the miss."
+  },
+  "bagTitle": "Your bag today",
+  "bag": [
+    { "html": "4H <b>180</b>" },
+    { "html": "5H <b>165</b> · carries the creek", "star": true },
+    { "html": "5i <b>150</b>" },
+    { "html": "6i <b>135</b>" },
+    { "html": "7i <b>120</b> · pushes RIGHT", "star": true },
+    { "html": "8i <b>105</b>" },
+    { "html": "9i <b>90</b>" },
+    { "html": "PW <b>60-70</b> · money", "star": true }
+  ],
+  "stats": [
+    { "n": "33", "l": "Bogey-ish target" },
+    { "n": "27", "l": "Par · all par 3" },
+    { "n": "37", "l": "Last time (Aug 6)" }
+  ],
+  "nines": [
+    { "label": "The Marshes", "total": "Par 27 · 1,252 yds · all par 3 · target 33", "start": 1 }
+  ],
+  "holes": [
+    { "num": 1, "par": 3, "yards": 166, "hcp": 6, "accent": "", "tag": { "type": "flag", "text": "Front + left bunkers" },
+      "steps": [
+        { "k": "Tee", "v": "5-hybrid, smooth · carry to center, aim right of the left bunker", "wedge": true },
+        { "k": "Miss", "v": "Long-center is safe. Short is the front bunker, so take enough club." }
+      ], "target": { "score": 4, "last": 4 } },
+    { "num": 2, "par": 3, "yards": 108, "hcp": 7, "accent": "short", "tag": { "type": "par", "text": "Open · par look" },
+      "steps": [
+        { "k": "Tee", "v": "8i, smooth · center, nothing to fear here", "wedge": true },
+        { "k": "Green", "v": "Two putts, walk off with a par look." }
+      ], "target": { "score": 3, "last": 4 } },
+    { "num": 3, "par": 3, "yards": 121, "hcp": 5, "accent": "hard", "tag": { "type": "flag", "text": "Tree chute" },
+      "steps": [
+        { "k": "Tee", "v": "7i · aim a cup LEFT and thread the chute", "wedge": true },
+        { "k": "", "v": "You parred this one. Trees squeeze both sides, so commit to center-left, no steering.", "note": true }
+      ], "target": { "score": 4, "last": 3 } },
+    { "num": 4, "par": 3, "yards": 91, "hcp": 9, "accent": "short", "tag": { "type": "par", "text": "Shortest" },
+      "steps": [
+        { "k": "Tee", "v": "9i · aim center-left, away from the big RIGHT bunker", "wedge": true },
+        { "k": "Green", "v": "Shortest hole out here. Two putts." }
+      ], "target": { "score": 3, "last": 4 } },
+    { "num": 5, "par": 3, "yards": 136, "hcp": 4, "accent": "", "tag": { "type": "flag", "text": "Carry the bunker" },
+      "steps": [
+        { "k": "Tee", "v": "6i · center, enough club to carry the front bunker", "wedge": true },
+        { "k": "Miss", "v": "Long-center is fine. Never leave it short into the sand." }
+      ], "target": { "score": 4, "last": 4 } },
+    { "num": 6, "par": 3, "yards": 157, "hcp": 2, "accent": "hard", "tag": { "type": "water", "text": "Creek ~100" },
+      "steps": [
+        { "k": "Tee", "v": "5-hybrid · carry the creek (~100), aim center-left away from the RIGHT bunker", "wedge": true },
+        { "k": "", "v": "Second-hardest hole. Take the club that carries the creek without thinking, and commit.", "note": true }
+      ], "target": { "score": 4, "last": 6 } },
+    { "num": 7, "par": 3, "yards": 130, "hcp": 8, "accent": "short", "tag": { "type": "par", "text": "You parred it" },
+      "steps": [
+        { "k": "Tee", "v": "6i · center. Trees only on the LEFT, so favour center-right", "wedge": true },
+        { "k": "Green", "v": "First green you hit in reg all day. Two putts." }
+      ], "target": { "score": 3, "last": 3 } },
+    { "num": 8, "par": 3, "yards": 186, "hcp": 1, "hcpNote": "hardest", "accent": "hard", "tag": { "type": "flag", "text": "Two bunkers LEFT" },
+      "steps": [
+        { "k": "Tee", "v": "4H to FRONT-RIGHT, or lay up · two bunkers guard the LEFT", "wedge": true },
+        { "k": "", "v": "Longest and hardest. Front-right is safe; a lay-up and a chip is a perfectly good bogey.", "note": true }
+      ], "target": { "score": 4, "last": 5 } },
+    { "num": 9, "par": 3, "yards": 151, "hcp": 3, "accent": "hard", "tag": { "type": "flag", "text": "Sand long-right" },
+      "steps": [
+        { "k": "Tee", "v": "5i or 5H · center, NOT long. Bunker left-front, more sand long-right", "wedge": true },
+        { "k": "", "v": "This is the \"a little more\" hole. Take the honest number and swing smooth, not hard.", "note": true }
+      ], "target": { "score": 4, "last": 4 } }
+  ],
+  "keysTitle": "Four things for the lab",
+  "keys": [
+    "<b>Smooth is full and committed, not light.</b> Both pars here came from committed swings; every short-right came from decelerating. This is the course to groove it.",
+    "<b>\"More\" is the miss.</b> #9 is where a little extra cost you a ball. If smooth won't carry, club up, never swing harder.",
+    "<b>Thick-lie chips get scalded.</b> On grabby rough or wet turf, open the face slightly, ball back, and accelerate down and through. It is a lie problem, not a swing one.",
+    "<b>Putts: die it at the hole.</b> Lines are good, speed is the miss. Short putts lean right → aim the LEFT EDGE."
+  ],
+  "footer": "9 holes, all par 3 · Par 27 · target 33 · \"last:\" from Aug 6 (37; #6 was estimated after a work call).",
+  "images": null
+}
