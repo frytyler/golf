@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stonebridge · Full 18 · Boring Bogey</title>
+<meta name="theme-color" content="#12312a">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/bbb.css">
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Hole photo">
+  <div class="lb-inner">
+    <div class="lb-bar">
+      <span class="lb-h" id="lbH">Hole <b>1</b></span>
+      <span class="lb-meta" id="lbMeta"></span>
+      <button class="lb-close" id="lbClose">Close &#10005;</button>
+    </div>
+    <div class="lb-stage">
+      <img class="lb-img" id="lbImg" alt="">
+      <div class="lb-fallback" id="lbFallback"></div>
+    </div>
+    <div class="lb-nav" id="lbNav">
+      <button id="lbPrev">&lsaquo; Prev hole</button>
+      <button id="lbNext">Next hole &rsaquo;</button>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/renderer.js"></script>
+<script src="../assets/tracker.js"></script>
+<script>
+  fetch('../data/courses/stonebridge.json')
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (C) { BBB.render(C); BBB.initTracker(C); })
+    .catch(function (e) {
+      document.getElementById('app').innerHTML =
+        '<p style="font-family:IBM Plex Mono,monospace;padding:20px 4px">Could not load course data (' + e.message + '). Open this on the hosted site so it can fetch its data.</p>';
+    });
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js').catch(function () {}); }
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+{
+  "slug": "stonebridge",
+  "eyebrow": "The Boring Bogey Blueprint · Full 18",
+  "title": "Stonebridge",
+  "accent": "The Full Loop",
+  "sub": "White tees · 18 holes · 5,151 yds · Par 70",
+  "indexLabel": "HCP",
+  "logLabel": "Stonebridge 18",
+  "thesis": "Your first full round here was 103 on Jul 11, about seven under your usual 110, and the front has since dropped to 46. Bring the whole plan to all 18. <b>This is a water course: nearly every hole has a way to make a big number, and every one is optional. One dry ball, aim centre, advance to a wedge, take the bogey.</b>",
+  "tempo": { "label": "Your one swing thought, every club", "word": "Smooth", "note": "Full and committed, never light. If smooth won't reach, club up. \"More\" is the miss." },
+  "bagTitle": "Your bag today",
+  "bag": [
+    { "html": "Driver <b>185</b> · smooth" },
+    { "html": "Hybrids 4·5·6 · carry ~10-15 over the iron #", "star": true },
+    { "html": "5i <b>150</b>" },
+    { "html": "6i <b>135</b>" },
+    { "html": "7i <b>120</b> · pushes right" },
+    { "html": "8i <b>105</b>" },
+    { "html": "9i <b>90</b>" },
+    { "html": "PW <b>60-70</b> · money club", "star": true }
+  ],
+  "stats": [
+    { "n": "88", "l": "Bogey every hole" },
+    { "n": "70", "l": "Par" },
+    { "n": "103", "l": "Baseline to beat · Jul 11" }
+  ],
+  "nines": [
+    { "label": "Front Nine", "total": "2,433 yds · Par 34 · target 43", "start": 1 },
+    { "label": "Back Nine", "total": "2,718 yds · Par 36 · target 45", "start": 10 }
+  ],
+  "holes": [
+    { "num": 1, "par": 4, "yards": 355, "hcp": 3, "accent": "hard", "tag": { "type": "water", "text": "Water right" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · aim centre-left (dry)" },
+        { "k": "Setup", "v": "8-iron, leave ~65" },
+        { "k": "Wedge", "v": "PW, centre of green", "wedge": true }
+      ], "target": { "score": 5, "last": 7 } },
+    { "num": 2, "par": 3, "yards": 153, "hcp": 11, "accent": "hard", "tag": { "type": "flag", "text": "Hero-shot trap" },
+      "steps": [
+        { "k": "Reframe", "v": "Firing over the water IS the hero shot. Skip it." },
+        { "k": "Aim", "v": "The dry side (water is RIGHT, favour left and long)" },
+        { "k": "Swing", "v": "The club you carry to dry land without thinking · smooth" },
+        { "k": "Then", "v": "Chip on, two putts. A dry 4 or 5 beats an 8.", "wedge": true },
+        { "k": "", "v": "One dry ball in play. Never re-tee into the water.", "note": true }
+      ], "target": { "score": 4, "last": 5 } },
+    { "num": 3, "par": 5, "yards": 473, "hcp": 7, "accent": "", "tag": { "type": "water", "text": "Water all down right" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · favour left" },
+        { "k": "Setup", "v": "5-hybrid (left), then 9i, ~65" },
+        { "k": "Wedge", "v": "PW", "wedge": true }
+      ], "target": { "score": 6, "last": 7 } },
+    { "num": 4, "par": 4, "yards": 331, "hcp": 1, "hcpNote": "hardest", "accent": "hard", "tag": { "type": "flag", "text": "No heroics" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · away from right water" },
+        { "k": "Setup", "v": "9-iron, leave ~55" },
+        { "k": "Wedge", "v": "PW · take the bogey", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 5, "par": 4, "yards": 260, "hcp": 13, "accent": "short", "tag": { "type": "par", "text": "Par look" },
+      "steps": [
+        { "k": "Tee", "v": "5-hybrid/5i, NOT driver (water at green)" },
+        { "k": "Setup", "v": "Lands ~110 short of the pond" },
+        { "k": "Wedge", "v": "Smooth 9i to the middle, carry the corner", "wedge": true }
+      ], "target": { "score": 5, "last": 6 } },
+    { "num": 6, "par": 4, "yards": 310, "hcp": 9, "accent": "", "tag": null,
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth (bunkers, no water)" },
+        { "k": "Setup", "v": "8-iron, leave ~65" },
+        { "k": "Wedge", "v": "PW", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 7, "par": 3, "yards": 104, "hcp": 15, "accent": "short", "tag": { "type": "par", "text": "Par look" },
+      "steps": [
+        { "k": "Tee", "v": "8-iron, smooth · aim centre (sand left)" },
+        { "k": "Green", "v": "Two putts", "wedge": true }
+      ], "target": { "score": 4, "last": 4 } },
+    { "num": 8, "par": 4, "yards": 343, "hcp": 5, "accent": "short", "tag": { "type": "par", "text": "You parred it here" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · aim centre" },
+        { "k": "Setup", "v": "9-iron, leave ~68" },
+        { "k": "Wedge", "v": "PW · do it again", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 9, "par": 3, "yards": 104, "hcp": 17, "hcpNote": "easiest", "accent": "short", "tag": { "type": "par", "text": "Birdied it in R3" },
+      "steps": [
+        { "k": "Tee", "v": "8-iron, carry to centre (bunkers all around)" },
+        { "k": "Green", "v": "Two putts", "wedge": true }
+      ], "target": { "score": 4, "last": 2 } },
+    { "num": 10, "par": 5, "yards": 458, "hcp": 4, "accent": "hard", "tag": { "type": "water", "text": "Water long-right" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · centre (fairway bunkers right)" },
+        { "k": "Setup", "v": "5-hybrid, then leave ~65" },
+        { "k": "Wedge", "v": "PW to centre · never long-right (water)", "wedge": true }
+      ], "target": { "score": 6, "last": 6 } },
+    { "num": 11, "par": 3, "yards": 150, "hcp": 8, "accent": "hard", "tag": { "type": "flag", "text": "Forced carry" },
+      "steps": [
+        { "k": "Reframe", "v": "Pond fills the whole right and short-right. The pin side is the trap." },
+        { "k": "Aim", "v": "Centre-left, the dry side (a bunker left beats water right)" },
+        { "k": "Swing", "v": "Full club to carry comfortably, smooth · don't leave it short-right" },
+        { "k": "Then", "v": "Two putts from dry beats a re-tee", "wedge": true }
+      ], "target": { "score": 4, "last": 6 } },
+    { "num": 12, "par": 4, "yards": 302, "hcp": 14, "accent": "", "tag": { "type": "water", "text": "Water right ×2" },
+      "steps": [
+        { "k": "Tee", "v": "5-hybrid/5i, NOT driver (water right in the landing area)" },
+        { "k": "Setup", "v": "Leave a full wedge, ~90, from left-centre" },
+        { "k": "Wedge", "v": "PW to centre · miss left, never right", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 13, "par": 3, "yards": 101, "hcp": 16, "accent": "short", "tag": { "type": "par", "text": "Short carry" },
+      "steps": [
+        { "k": "Tee", "v": "9-iron, smooth · aim centre (bail left is dry)" },
+        { "k": "Green", "v": "Two putts · don't miss right or long", "wedge": true }
+      ], "target": { "score": 4, "last": 5 } },
+    { "num": 14, "par": 4, "yards": 283, "hcp": 12, "accent": "short", "tag": { "type": "par", "text": "Trees, no water" },
+      "steps": [
+        { "k": "Tee", "v": "5-hybrid · position, not distance (trees both sides)" },
+        { "k": "Setup", "v": "Short iron to ~70" },
+        { "k": "Wedge", "v": "PW to centre · don't short-side left", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 15, "par": 5, "yards": 521, "hcp": 2, "hcpNote": "hardest back", "accent": "hard", "tag": { "type": "flag", "text": "Water all down right" },
+      "steps": [
+        { "k": "Reframe", "v": "HCP 2, water the entire right side. A three-shot hole, no heroes." },
+        { "k": "Tee", "v": "Driver, smooth · aim left-centre, never bail right" },
+        { "k": "Setup", "v": "5-hybrid then 9i, staying left, leave ~65" },
+        { "k": "Wedge", "v": "PW · a dry 6 or 7 here is a great number", "wedge": true },
+        { "k": "", "v": "One dry ball. The water never wins today.", "note": true }
+      ], "target": { "score": 6, "last": 7 } },
+    { "num": 16, "par": 4, "yards": 329, "hcp": 6, "accent": "hard", "tag": { "type": "water", "text": "Water right (dogleg)" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · aim LEFT-centre, don't cut the right corner (water)" },
+        { "k": "Setup", "v": "9-iron to ~65" },
+        { "k": "Wedge", "v": "PW to centre · safe miss is left", "wedge": true }
+      ], "target": { "score": 5, "last": 5 } },
+    { "num": 17, "par": 3, "yards": 139, "hcp": 18, "hcpNote": "easiest", "accent": "", "tag": { "type": "water", "text": "Creek carry" },
+      "steps": [
+        { "k": "Tee", "v": "Enough club to carry the creek · 6i, aim centre, a touch left" },
+        { "k": "Green", "v": "Don't leave it short (creek) · two putts", "wedge": true }
+      ], "target": { "score": 4, "last": 5 } },
+    { "num": 18, "par": 5, "yards": 435, "hcp": 10, "accent": "hard", "tag": { "type": "water", "text": "Water left & green" },
+      "steps": [
+        { "k": "Tee", "v": "Driver, smooth · aim centre-right, away from the left ponds" },
+        { "k": "Setup", "v": "Lay up short of the green's water to a full wedge, ~90" },
+        { "k": "Wedge", "v": "PW to centre · the green is ringed, so middle only", "wedge": true },
+        { "k": "", "v": "One dry ball closes a clean round.", "note": true }
+      ], "target": { "score": 6, "last": 6 } }
+  ],
+  "keysTitle": "Five things to carry all 18",
+  "keys": [
+    "<b>Smooth is full and committed, not light.</b> Every green you have hit in regulation came from a committed smooth swing. Light and steery is where the topped and the short ones come from. Commit to the club.",
+    "<b>\"More\" is the miss.</b> Three times last round, reaching for extra turned into a slice right and LOST distance. If smooth will not get there, club up. Never swing harder. This is your most reliable finding.",
+    "<b>Aim the dry side, one ball in play.</b> Water is on 1, 3, 5 up front and 10, 11, 12, 15, 16, 17, 18 on the back. Aim away from it every time and never re-tee into it. A dry double beats a wet triple, every hole.",
+    "<b>New watch: play the centre number, then club up.</b> Take the front/centre/back reading, use centre, and add a club. You come up short, so the honest number is longer than it feels. Centre plus one.",
+    "<b>Short game and putt speed win the card.</b> Chipping is your strength, so lean on it after every missed green. On the greens, die it at the hole. Speed is your only miss; the lines are already good."
+  ],
+  "footer": "White tees · Par 70 · target 88 (bogey golf) · baseline 103 (Jul 11) · \"last:\" front = your Round 3 (best); back = your Jul 11 debut",
+  "images": { "base": "../img/stonebridge/", "holePattern": "holeNN.jpg", "scorecard": "scorecard.jpg", "tees": "White", "par": 70 }
+}

@@ -1,0 +1,56 @@
+{
+  "generated": "2026-08-19",
+  "note": "Aggregate the dashboard reads. Regenerated when a round is added to data/rounds/. Dates marked null are unknown; scores are from Tyler's cards and the master context.",
+  "rounds": [
+    {
+      "id": "2026-07-11-stonebridge-18",
+      "course": "stonebridge", "courseName": "Stonebridge",
+      "date": "2026-07-11", "tees": "White",
+      "holes": 18, "segment": "18", "par": 70, "score": 103, "toPar": 33,
+      "series": "stonebridge-front", "seriesRound": 1,
+      "scores": [6,8,7,7,6,6,5,4,4,6,6,5,5,5,7,5,5,6],
+      "note": "First full 18. Debut of the plan, about 7 under the usual 110."
+    },
+    {
+      "id": "2026-07-22-stonebridge-front",
+      "course": "stonebridge", "courseName": "Stonebridge",
+      "date": "2026-07-22", "tees": "White",
+      "holes": 9, "segment": "front", "par": 34, "score": 53, "toPar": 19,
+      "series": "stonebridge-front", "seriesRound": 2, "partial": true,
+      "note": "Front only. #2 fixed to 5, but #8 blew up to 8."
+    },
+    {
+      "id": "stonebridge-front-r3",
+      "course": "stonebridge", "courseName": "Stonebridge",
+      "date": null, "dateApprox": "2026-08", "tees": "White",
+      "holes": 9, "segment": "front", "par": 34, "score": 46, "toPar": 12,
+      "series": "stonebridge-front", "seriesRound": 3,
+      "scores": [7,5,7,5,6,5,4,5,2],
+      "note": "Broke 50. First birdie (#9). Killed the #8 blow-up. Date approximate."
+    },
+    {
+      "id": "marchwood-par3",
+      "course": "marchwood", "courseName": "Marchwood (par 3)",
+      "date": "2026-08-06", "tees": "",
+      "holes": 9, "segment": "9", "par": 27, "score": 37, "toPar": 10,
+      "scores": [4,4,3,4,4,6,3,5,4],
+      "note": "Par-3 short-game lab. #6 estimated. Two pars (#3, #7)."
+    },
+    {
+      "id": "manderley-south",
+      "course": "manderley", "courseName": "Manderley South 9",
+      "date": "2026-08-07", "tees": "White",
+      "holes": 9, "segment": "9", "par": 35, "score": 48, "toPar": 13,
+      "scores": [5,6,3,5,6,4,7,5,7],
+      "note": "Practice round. 0 penalties, 0 lost balls. Par on the #3 water carry."
+    },
+    {
+      "id": "canadian-east",
+      "course": "canadian", "courseName": "The Canadian (East 9)",
+      "date": null, "tees": "",
+      "holes": 9, "segment": "9", "par": 35, "score": 51, "toPar": 16,
+      "scores": [6,4,6,6,8,3,7,5,6],
+      "note": "Held the scary holes. Two blow-ups (#5 par 5, #7). Date unknown."
+    }
+  ]
+}
