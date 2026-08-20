@@ -7,16 +7,16 @@
       "course": "stonebridge", "courseName": "Stonebridge",
       "date": "2026-07-11", "tees": "White",
       "holes": 18, "segment": "18", "par": 70, "score": 103, "toPar": 33,
-      "series": "stonebridge-front", "seriesRound": 1,
+      "series": "stonebridge-front", "seriesRound": 1, "seriesValue": 53,
       "scores": [6,8,7,7,6,6,5,4,4,6,6,5,5,5,7,5,5,6],
-      "note": "First full 18. Debut of the plan, about 7 under the usual 110."
+      "note": "First full 18. Debut of the plan, about 7 under the usual 110. Front nine was 53."
     },
     {
       "id": "2026-07-22-stonebridge-front",
       "course": "stonebridge", "courseName": "Stonebridge",
       "date": "2026-07-22", "tees": "White",
       "holes": 9, "segment": "front", "par": 34, "score": 53, "toPar": 19,
-      "series": "stonebridge-front", "seriesRound": 2, "partial": true,
+      "series": "stonebridge-front", "seriesRound": 2, "seriesValue": 53, "partial": true,
       "note": "Front only. #2 fixed to 5, but #8 blew up to 8."
     },
     {
@@ -24,7 +24,7 @@
       "course": "stonebridge", "courseName": "Stonebridge",
       "date": null, "dateApprox": "2026-08", "tees": "White",
       "holes": 9, "segment": "front", "par": 34, "score": 46, "toPar": 12,
-      "series": "stonebridge-front", "seriesRound": 3,
+      "series": "stonebridge-front", "seriesRound": 3, "seriesValue": 46,
       "scores": [7,5,7,5,6,5,4,5,2],
       "note": "Broke 50. First birdie (#9). Killed the #8 blow-up. Date approximate."
     },

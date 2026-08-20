@@ -13,7 +13,8 @@
     if (min === max) { min -= 2; max += 2; }
     var innerW = W - padL - padR, innerH = H - padT - padB;
     function x(i) { return padL + (points.length === 1 ? innerW / 2 : innerW * i / (points.length - 1)); }
-    function y(v) { return padT + innerH * (v - min) / (max - min); }
+    // lower score sits lower on the chart, so an improving trend goes down
+    function y(v) { return padT + innerH * (max - v) / (max - min); }
 
     var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + (opts.aria || 'trend') + '">';
     // gridlines: min, mid, max
