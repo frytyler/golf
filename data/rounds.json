@@ -3,6 +3,15 @@
   "note": "Aggregate the dashboard reads. Regenerated when a round is added to data/rounds/. Dates marked null are unknown; scores are from Tyler's cards and the master context.",
   "rounds": [
     {
+      "id": "2026-08-21-stonebridge-18",
+      "course": "stonebridge", "courseName": "Stonebridge",
+      "date": "2026-08-21", "tees": "White",
+      "holes": 18, "segment": "18", "par": 70, "score": 98, "toPar": 28,
+      "scores": [6,5,5,7,4,5,4,5,4,7,5,6,6,5,7,6,5,6],
+      "putts": 33, "fw": "4/12", "gir": "1/18",
+      "note": "Best 18 to date, down from 103. Front 45, back 53. Driver was the miss and greens were scarce, but the putter carried it (33 putts). A couple of extra tee balls, so not a fully clean card."
+    },
+    {
       "id": "2026-07-11-stonebridge-18",
       "course": "stonebridge", "courseName": "Stonebridge",
       "date": "2026-07-11", "tees": "White",
