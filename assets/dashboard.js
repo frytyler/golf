@@ -22,6 +22,11 @@
     s += '<span class="rd-course">' + r.courseName + '</span>';
     if (r.partial) s += '<span class="rd-flag">partial</span>';
     s += '<span class="rd-meta">' + dateStr + ' · ' + seg + (r.tees ? ' · ' + r.tees + ' tees' : '') + '</span>';
+    var st = [];
+    if (r.putts != null) st.push(r.putts + ' putts');
+    if (r.fw) st.push('FW ' + r.fw);
+    if (r.gir) st.push('GIR ' + r.gir);
+    if (st.length) s += '<span class="rd-meta">' + st.join(' · ') + '</span>';
     if (r.note) s += '<span class="rd-note">' + r.note + '</span>';
     s += '</div>';
     return s;

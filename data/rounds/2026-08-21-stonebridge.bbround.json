@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-21",
+  "course": "stonebridge",
+  "logLabel": "Stonebridge 18",
+  "note": "First full 18 since the July 11 debut. Tracked on the Bushnell iON Elite. Driver was the miss; putting carried it. A couple of extra tee balls in the round, so not a fully clean card.",
+  "h": {
+    "1":  { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive missed left" },
+    "2":  { "s": 5, "p": 1, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "3":  { "s": 5, "p": 1, "pen": false, "fir": false, "gir": false, "adj": "par on the par 5 without a GIR, good scramble" },
+    "4":  { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "HCP 1, drive left, triple" },
+    "5":  { "s": 4, "p": 2, "pen": false, "fir": false, "gir": true, "adj": "PAR, only green hit on the front" },
+    "6":  { "s": 5, "p": 2, "pen": false, "fir": true, "gir": false, "adj": "" },
+    "7":  { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "8":  { "s": 5, "p": 2, "pen": false, "fir": true, "gir": false, "adj": "" },
+    "9":  { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "10": { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive left" },
+    "11": { "s": 5, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "12": { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "13": { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "triple on the short par 3" },
+    "14": { "s": 5, "p": 2, "pen": false, "fir": true, "gir": false, "adj": "" },
+    "15": { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive left" },
+    "16": { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "17": { "s": 5, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "18": { "s": 6, "p": 1, "pen": false, "fir": true, "gir": false, "adj": "" }
+  }
+}
