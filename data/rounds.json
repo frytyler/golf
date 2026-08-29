@@ -3,6 +3,15 @@
   "note": "Aggregate the dashboard reads. Regenerated when a round is added to data/rounds/. Dates marked null are unknown; scores are from Tyler's cards and the master context.",
   "rounds": [
     {
+      "id": "2026-08-28-stonebridge-18",
+      "course": "stonebridge", "courseName": "Stonebridge",
+      "date": "2026-08-28", "tees": "White",
+      "holes": 18, "segment": "18", "par": 70, "score": 103, "toPar": 33,
+      "scores": [7,6,7,7,6,6,4,6,4,7,5,5,4,7,7,4,4,7],
+      "putts": 34, "fw": "6/12", "gir": "0/18",
+      "note": "Front 53, back 50. Zero greens in reg all day, so every hole was a scramble, but the putter held (34 putts) and a chip-in par on #16. Par-3 avg 4.5, par-4 avg 6.0, par-5 avg 7.0: uniform, which points at approaches, not one hole type."
+    },
+    {
       "id": "2026-08-21-stonebridge-18",
       "course": "stonebridge", "courseName": "Stonebridge",
       "date": "2026-08-21", "tees": "White",

@@ -83,31 +83,31 @@
         { "k": "Tee", "v": "8-iron, carry to centre (bunkers all around)" },
         { "k": "Green", "v": "Two putts", "wedge": true }
       ], "target": { "score": 4, "last": 2 } },
-    { "num": 10, "par": 5, "yards": 458, "hcp": 4, "accent": "hard", "tag": { "type": "water", "text": "Water long-right" },
+    { "num": 10, "par": 5, "yards": 458, "hcp": 8, "accent": "hard", "tag": { "type": "water", "text": "Water long-right" },
       "steps": [
         { "k": "Tee", "v": "Driver, smooth · centre (fairway bunkers right)" },
         { "k": "Setup", "v": "5-hybrid, then leave ~65" },
         { "k": "Wedge", "v": "PW to centre · never long-right (water)", "wedge": true }
       ], "target": { "score": 6, "last": 6 } },
-    { "num": 11, "par": 3, "yards": 150, "hcp": 8, "accent": "hard", "tag": { "type": "flag", "text": "Forced carry" },
+    { "num": 11, "par": 3, "yards": 150, "hcp": 10, "accent": "hard", "tag": { "type": "flag", "text": "Forced carry" },
       "steps": [
         { "k": "Reframe", "v": "Pond fills the whole right and short-right. The pin side is the trap." },
         { "k": "Aim", "v": "Centre-left, the dry side (a bunker left beats water right)" },
         { "k": "Swing", "v": "Full club to carry comfortably, smooth · don't leave it short-right" },
         { "k": "Then", "v": "Two putts from dry beats a re-tee", "wedge": true }
       ], "target": { "score": 4, "last": 6 } },
-    { "num": 12, "par": 4, "yards": 302, "hcp": 14, "accent": "", "tag": { "type": "water", "text": "Water right ×2" },
+    { "num": 12, "par": 4, "yards": 302, "hcp": 4, "accent": "", "tag": { "type": "water", "text": "Water right ×2" },
       "steps": [
         { "k": "Tee", "v": "5-hybrid/5i, NOT driver (water right in the landing area)" },
         { "k": "Setup", "v": "Leave a full wedge, ~90, from left-centre" },
         { "k": "Wedge", "v": "PW to centre · miss left, never right", "wedge": true }
       ], "target": { "score": 5, "last": 5 } },
-    { "num": 13, "par": 3, "yards": 101, "hcp": 16, "accent": "short", "tag": { "type": "par", "text": "Short carry" },
+    { "num": 13, "par": 3, "yards": 101, "hcp": 14, "accent": "short", "tag": { "type": "par", "text": "Short carry" },
       "steps": [
         { "k": "Tee", "v": "9-iron, smooth · aim centre (bail left is dry)" },
         { "k": "Green", "v": "Two putts · don't miss right or long", "wedge": true }
       ], "target": { "score": 4, "last": 5 } },
-    { "num": 14, "par": 4, "yards": 283, "hcp": 12, "accent": "short", "tag": { "type": "par", "text": "Trees, no water" },
+    { "num": 14, "par": 4, "yards": 283, "hcp": 18, "hcpNote": "easiest", "accent": "short", "tag": { "type": "par", "text": "Trees, no water" },
       "steps": [
         { "k": "Tee", "v": "5-hybrid · position, not distance (trees both sides)" },
         { "k": "Setup", "v": "Short iron to ~70" },
@@ -127,12 +127,12 @@
         { "k": "Setup", "v": "9-iron to ~65" },
         { "k": "Wedge", "v": "PW to centre · safe miss is left", "wedge": true }
       ], "target": { "score": 5, "last": 5 } },
-    { "num": 17, "par": 3, "yards": 139, "hcp": 18, "hcpNote": "easiest", "accent": "", "tag": { "type": "water", "text": "Creek carry" },
+    { "num": 17, "par": 3, "yards": 139, "hcp": 12, "accent": "", "tag": { "type": "water", "text": "Creek carry" },
       "steps": [
         { "k": "Tee", "v": "Enough club to carry the creek · 6i, aim centre, a touch left" },
         { "k": "Green", "v": "Don't leave it short (creek) · two putts", "wedge": true }
       ], "target": { "score": 4, "last": 5 } },
-    { "num": 18, "par": 5, "yards": 435, "hcp": 10, "accent": "hard", "tag": { "type": "water", "text": "Water left & green" },
+    { "num": 18, "par": 5, "yards": 435, "hcp": 16, "accent": "hard", "tag": { "type": "water", "text": "Water left & green" },
       "steps": [
         { "k": "Tee", "v": "Driver, smooth · aim centre-right, away from the left ponds" },
         { "k": "Setup", "v": "Lay up short of the green's water to a full wedge, ~90" },
