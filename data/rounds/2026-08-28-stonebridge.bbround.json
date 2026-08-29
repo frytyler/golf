@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-28",
+  "course": "stonebridge",
+  "logLabel": "Stonebridge 18",
+  "note": "Full 18 on the iON Elite. Zero greens hit all day, but the putter and short game held it together (chip-in par on #16). Driver was better on the back (67% fairways).",
+  "h": {
+    "1":  { "s": 7, "p": 2, "pen": false, "fir": true,  "gir": false, "adj": "" },
+    "2":  { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "3":  { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "4":  { "s": 7, "p": 2, "pen": false, "fir": true,  "gir": false, "adj": "HCP 1, triple again" },
+    "5":  { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "6":  { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "7":  { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "8":  { "s": 6, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "9":  { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "10": { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive right" },
+    "11": { "s": 5, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "12": { "s": 5, "p": 2, "pen": false, "fir": true,  "gir": false, "adj": "" },
+    "13": { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "14": { "s": 7, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "drive left" },
+    "15": { "s": 7, "p": 2, "pen": false, "fir": true,  "gir": false, "adj": "" },
+    "16": { "s": 4, "p": 0, "pen": false, "fir": true,  "gir": false, "adj": "chip-in for PAR" },
+    "17": { "s": 4, "p": 2, "pen": false, "fir": false, "gir": false, "adj": "" },
+    "18": { "s": 7, "p": 2, "pen": false, "fir": true,  "gir": false, "adj": "" }
+  }
+}
